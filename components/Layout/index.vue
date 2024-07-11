@@ -6,7 +6,7 @@
     <n-layout has-sider>
       <Menu class="menu" :routes="routes"></Menu>
       <n-layout-content content-style="background: #f0f2f5">
-        <div style="height: 100vh; padding: 10px; margin: 10px; background-color: #fff">
+        <div style="height: 100vh; padding: 10px; background-color: #fff; box-sizing: border-box">
           <router-view v-slot="{Component, route}">
             <transition name="fade-transform" mode="out-in">
               <component :is="Component" :key="route.path" />

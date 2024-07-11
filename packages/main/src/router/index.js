@@ -1,7 +1,12 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import { setupGuard } from './guard'
 
-const constantRoutes = []
+const constantRoutes = [
+  {
+    path: '/404',
+    component: () => import('@vue-demo/components/404.vue')
+  }
+]
 constantRoutes._map = keyBy(constantRoutes, 'path')
 
 const router = createRouter({

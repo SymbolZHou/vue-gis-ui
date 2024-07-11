@@ -108,7 +108,7 @@ provide('three', {
 
 <style lang="scss" scoped>
 .container {
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 </style>
