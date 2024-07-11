@@ -1,0 +1,12 @@
+packages:
+  - "packages/*"
+  - "assets/*"
+  - "components/**"
+  - "hooks/**"
+  - "directives/**"
+  - "interceptors/**"
+  - "api/**"
+  - "utils/**"
+  - "enum/**"
+  - "mock/**"
+  - "!**/test/**"

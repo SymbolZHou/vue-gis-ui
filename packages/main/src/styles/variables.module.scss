@@ -1,0 +1,9 @@
+$-primary: #36a3ff;
+
+:root {
+  --color-primary: #{$-primary};
+}
+
+:export {
+  primaryColor: $-primary;
+}
