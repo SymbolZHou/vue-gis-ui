@@ -17,12 +17,6 @@ function interceptorLogin(router) {
       routerMap(routerStore.routes)
       filterRoutes(routerStore.routes)
 
-      routerStore.routes.push({
-        path: '/:pathMatch(.*)*',
-        redirect: '/404',
-        name: 'NotFound'
-      })
-
       resetRouter(routerStore.routes)
 
       return next({ ...to, replace: true })

@@ -10,8 +10,14 @@
 
 各子项目可独立部署, 也可集成
 
-#运行
-
+=运行
 pnpm i
-
 pnpm dev
+
+也可单独运行packages下面子项目
+根目录下:
+运行openlayers
+pnpm --filter openlayers dev
+
+运行threejs
+pnpm --filter threejs dev

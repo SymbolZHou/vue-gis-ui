@@ -3,6 +3,10 @@ import { setupGuard } from './guard'
 
 export const constantRoutes = [
   {
+    path: '/',
+    redirect: '/openlayers'
+  },
+  {
     path: '/404',
     component: () => import('@vue-demo/components/404.vue')
   }
@@ -29,6 +33,12 @@ export function resetRouter(routes = constantRoutes) {
     }
   })
   addRouter(routes)
+
+  router.addRoute({
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+    name: 'NotFound'
+  })
 }
 
 export function setupRouter(app) {

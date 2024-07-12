@@ -5,7 +5,7 @@ const modules = import.meta.glob('./*.js', {
 
 const routes = Object.keys(modules).reduce((target, path) => {
   let item = modules[path]
-  target.push(item)
+  target.push(...item)
   return target
 }, [])
 

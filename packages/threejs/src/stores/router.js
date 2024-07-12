@@ -12,9 +12,7 @@ export const useRouterStore = defineStore('router', {
   },
   actions: {
     async getRouters() {
-      let res = await getRouters({
-        system: 'three'
-      })
+      let res = await getRouters()
 
       if (isEmpty(res.data)) {
         notification.error({
@@ -23,15 +21,17 @@ export const useRouterStore = defineStore('router', {
         })
         throw new Error('当前账号无权限,请联系管理员')
       }
-      res.data._data = flatMap(res.data, function flatFn(n) {
+
+      let data = res.data.filter((item) => item.name == 'three')
+
+      data._data = flatMap(data, function flatFn(n) {
         if (n.children) return [n, ...flatMap(n.children, flatFn)]
         return n
       })
 
-      res.data._map = keyBy(res.data._data, 'name')
+      data._map = keyBy(data._data, 'name')
 
-      this.routes = res.data
-
+      this.routes = data
       return res
     }
   }

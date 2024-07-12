@@ -1,14 +1,11 @@
 import Layout from '@vue-demo/components/Layout'
+import { routes } from '@vue-demo/packages/openlayers/src/router/routes'
 
-export default {
-  path: '/openlayers',
-  name: 'openlayers',
-  component: markRaw(Layout)
-  // children: [
-  //   {
-  //     path: '',
-  //     name: ''
-  //     // component: () => import('@/views/sys/system/menu')
-  //   }
-  // ]
-}
+export default [
+  {
+    path: '/openlayers',
+    name: 'openlayers',
+    component: markRaw(Layout),
+    children: routes
+  }
+]

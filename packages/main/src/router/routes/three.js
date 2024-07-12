@@ -7,12 +7,14 @@ routes.forEach((item) => {
   }
 })
 
-export default {
-  path: '/three',
-  name: 'three',
-  component: markRaw(Layout),
-  children: routes,
-  meta: {
-    title: 'threejs'
+export default [
+  {
+    path: '/three',
+    name: 'three',
+    component: markRaw(Layout),
+    children: routes,
+    meta: {
+      title: 'threejs'
+    }
   }
-}
+]

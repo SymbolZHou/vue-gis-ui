@@ -3,6 +3,10 @@ import { setupGuard } from './guard'
 
 const constantRoutes = [
   {
+    path: '/',
+    name: 'root'
+  },
+  {
     path: '/404',
     component: () => import('@vue-demo/components/404.vue')
   }
@@ -21,12 +25,23 @@ export function addRouter(routes) {
 }
 
 export function resetRouter(routes = constantRoutes) {
+  router.addRoute({
+    path: '/',
+    name: 'root',
+    redirect: routes._data[0].path
+  })
   router.getRoutes().forEach((route) => {
     if (!constantRoutes._map[route.path]) {
       router.removeRoute(route.name)
     }
   })
   addRouter(routes)
+
+  router.addRoute({
+    path: '/:pathMatch(.*)*',
+    redirect: '/404',
+    name: 'NotFound'
+  })
 }
 
 export const setupRouter = (app) => {

@@ -9,10 +9,7 @@ import { useRouterStore } from '@/stores'
 let routerStore = useRouterStore()
 
 const routes = computed(() => {
-  return [
-    ...routerStore.routes._map['basic'].children,
-    ...routerStore.routes.filter((item) => item.path !== '/')
-  ]
+  return routerStore.routes._map['openlayers'].children
 })
 </script>
 <style lang="scss" scoped></style>
