@@ -24,7 +24,7 @@ let view = new View({
   maxZoom: 14,
   constrainResolution: true,
   projection: "EPSG:4326",
-  center: [116.25, 39.54],
+  center: [113.25, 22.54],
   ...props.defaultOptions
   // center: fromLonLat(props.defaultOptions.center)
 })

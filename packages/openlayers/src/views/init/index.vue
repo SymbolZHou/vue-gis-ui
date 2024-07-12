@@ -1,6 +1,21 @@
 <template>
   <Openlayers id="maps">
-    <OlView> </OlView>
+    <OlView>
+      <OlSelectLayers></OlSelectLayers>
+
+      <OlScaleLine></OlScaleLine>
+
+      <OlContextmenu @change:center="onChangeCenter" @change:zoom="onChangeZoom"></OlContextmenu>
+
+      <OlMeasure>
+        <OlDistance></OlDistance>
+        <OlArea></OlArea>
+      </OlMeasure>
+
+      <OlZoom></OlZoom>
+
+      <OlCompass></OlCompass>
+    </OlView>
   </Openlayers>
 </template>
 

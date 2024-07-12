@@ -14,10 +14,12 @@
 pnpm i
 pnpm dev
 
-也可单独运行packages下面子项目
-根目录下:
+也可单独运行packages下面子项目  
+根目录下:  
 运行openlayers
+
 pnpm --filter openlayers dev
 
 运行threejs
+
 pnpm --filter threejs dev

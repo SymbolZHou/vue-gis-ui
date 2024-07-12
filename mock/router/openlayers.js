@@ -53,6 +53,13 @@ export let openlayers = {
       meta: {
         title: "省市区下钻联动"
       }
+    },
+    {
+      path: "ship",
+      name: "ship",
+      meta: {
+        title: "模仿船讯网"
+      }
     }
   ]
 }

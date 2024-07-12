@@ -61,5 +61,13 @@ export default [
     meta: {
       title: '省市区下钻联动'
     }
+  },
+  {
+    path: 'ship',
+    name: 'ship',
+    component: () => import('../../views/ship/index'),
+    meta: {
+      title: '模仿船讯网'
+    }
   }
 ]
